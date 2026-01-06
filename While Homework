@@ -1,0 +1,16 @@
+#Name: Evan Machica
+#Period 6
+#While Homework
+#Time Spent 20 mintues
+#asks the user for a number input to change into a binary number later on.
+number = int(input("Enter a that you want to convert number: "))
+binary = ""
+#handles if the user put the number zero
+if number == 0:
+    binary = "0"
+#uses a while statment to convert a decimal number to binary
+while number > 0:
+    remainder = number % 2
+    binary = str(remainder) + binary
+    number = number // 2
+print("Binary:", binary)
