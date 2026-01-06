@@ -1,0 +1,30 @@
+#Name: Evan Machica
+#Period 6
+#F-string receipt maker
+#Time Spent 20 mintues
+item1 = input("Enter item #1: ")
+price1 = float(input(f"Enter the cost of {item1}: $"))
+
+item2 = input("Enter item #2: ")
+price2 = float(input(f"Enter the cost of {item2}: $"))
+
+item3 = input(f"enter item #3: ")
+price3 = float(input(f"Enter the cost of {item3}: $"))
+
+item4 = input("Enter item #4: ")
+price4 = float(input(f"Enter the cost of {item4}: $"))
+
+item5 = input("Enter item #5: ")
+price5 = float(input(f"Enter the cost of {item5}: $"))
+
+total = price1 + price2 + price3 + price4 + price5
+
+print(f"""
+receipt 
+{item1:<15} ${price1:>7.2f}
+{item2:<15} ${price2:>7.2f}
+{item3:<15} ${price3:>7.2f}
+{item4:<15} ${price4:>7.2f}
+{item5:<15} ${price5:>7.2f}
+total:          ${total:.2f}
+""")
