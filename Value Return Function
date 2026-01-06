@@ -1,0 +1,23 @@
+#Name: Evan Machica
+#Period 6
+#value return Homework
+#Time Spent 25 mintues
+#defines a main function that will take two numbers and returns 4 values
+def math_ops(a, b):
+    add = a + b
+    sub = a - b         
+    mul = a * b         
+    div = a / b          
+    return add, sub, mul, div
+#get the users input for a number by asking the user for two numbers
+x = float(input("Enter first number: "))
+y = float(input("Enter second number: "))
+
+#call the function main funtion at the start
+a, s, m, d = math_ops(x, y)
+
+#prints the final result after all the math is done.
+print("addition:", a)
+print("subtractaion:", s)
+print("multiplication:", m)
+print("division:", d)
