@@ -1,0 +1,16 @@
+#Name: Evan Machica
+#Period 6
+#for Homework
+#Time Spent 20 mintues
+#I made the value 'average' to store the sum of scores for a later use.
+average = 0.0
+#This part loops the code 5 times to get 5 scores from the user
+for i in range(5):
+    #here we sk the user to enter a score and convert it to a float
+    score = float(input("Enter a score: "))
+    #then the code adds the entered score to the running total
+    average += score  
+#we follow that by dividing the total by 5 to get the average
+average = average / 5
+#now we jsut print the calculated average
+print("The average score is:", average)
