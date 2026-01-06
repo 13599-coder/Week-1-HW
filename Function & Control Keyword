@@ -1,0 +1,27 @@
+#Name: Evan Machica
+#Period 6
+#functions hw
+#Time Spent 40 mintues
+def gretings():
+    #function just prints a simple greeting
+    print("hello welcome to the code.")
+def shownumber(num):
+    #this part of the function shows the number passed into it
+    print("The number ", num)
+def bye():
+    # This function prints a goodbye message
+    print("bye bye")
+def main():
+    # Call the greeting function
+    gretings()
+    # Loop that prints numbers 0–4, but skips 1 cause i dont like that number
+    for i in range(5):
+        if i == 1:
+            #the control keyword i used continue which skips the rest of this loop
+            continue
+        shownumber(i)  # Call another function inside the loop
+
+    #calls the bye function
+    bye()
+#runs the main function
+main()
