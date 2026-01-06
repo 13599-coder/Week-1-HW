@@ -1,0 +1,84 @@
+#Name: Evan Machica
+#Period 6
+#Final
+#Time Spent 7 Days and lots of youtube videos.
+print("Chess Opening")
+def main():
+    """main loop that allows the user to run multiple times for different openings."""
+    while True:
+        role = input("Are you playing as White or Black pieces? ").lower()
+        if role == "white":
+            white_moves()
+        elif role == "black":
+            blackm()
+        else:
+            print("That isn't a option please type either White or Black.")
+        #loops control so they can run it multiple times
+        runitback = input("Do you want to look another opening? (yes/no): ").lower()
+        if runitback != "yes":
+            print("Thanks for using chess opening helper!")
+            break
+#all possible valid opening moves for white made as a list. 
+white_openings = [
+    "a3", "a4", "b3", "b4", "c3", "c4",
+    "d3", "d4", "e3", "e4", "f3", "f4",
+    "g3", "g4", "h3", "h4",
+    "na3", "nc3", "nf3", "nh3"
+]
+# all the possible black responses to white moves
+black_responses = {
+    "e4": "Caro-Kann (c6), French (e6), or Sicilian Defense (c5)",
+    "d4": "Dutch Defense (f5), King's Indian (Nf6 + g6), or Slav Defense (c6)",
+    "g4": "Play e5, then d5, then c6. If White plays Bg2, play ...xg4.",
+    "a3": "Polish Defense setup, Sicilian Defense, or King's Indian Defense",
+    "nc3": "Nf6, d5, or e5",
+    "f4": "Nf6, e5, or d5",
+    "b3": "h6, d5, or d6",
+    "e3": "d5, e5, or h5",
+    "c4": "a5, c5, or b6",
+    "d3": "Nf6, d6, or a6",
+    "nf3": "g6, Nc6, or e6",
+    "g3": "b5, g6, or e5",
+    "a4": "c5, f5, or h6",
+    "b4": "d6, h6, or e5",
+    "na3": "a5, a6, or d5",
+    "nh3": "g6, d5, or c5",
+    "c3": "Nf6, f5, or c6"
+}
+#white replies to black’s first move 
+white_followups = {
+    "e5": "Play Nf3 or d4.",
+    "c5": "You can play Nf3, c3, or d4 (Open Sicilian).",
+    "c6": "Play d4, then Nc3 (Caro-Kann mainline).",
+    "e6": "Play d4 and prepare Nc3 (French mainline).",
+    "d5": "Play Nc3 or exd5 depending on your style.",
+    "g6": "Play d4 and then c4 (King's Indian setup).",
+    "nf6": "Play Nc3 or e5.",
+    "b6": "Play d4 or e4 to take the center."
+}
+def white_moves():
+    """Does all the moves if you choose to be the white pieces"""
+    white_move = input("What is your first move as white? ").lower()
+    if white_move not in white_openings:
+        print("That isn't a first move that works. But we can find a differnt move in a second.")
+    black_move = input("What move did black play? ").lower()
+    #gives white’s best follow-up
+    if black_move in white_followups:
+        print("Best move for white:", white_followups[black_move])
+    else:
+        print("The moves you entered aren't real, but I suggest that you develop pieces in the center")
+def blackm():
+    """does all the avalabile black moves for when the user is playing black."""
+    white_move = input("What is White's first move? ").lower()
+    #gives Black’s opening response
+    if white_move in black_responses:
+        print("Best response for black:", black_responses[white_move])
+    else:
+        print("That move isn't possible. I think its best if you play Nf6 or d5.")
+    #ask for white's next move
+    next_move = input("What is White's second move? ").lower()
+    if next_move in black_responses:
+        print("best follow up move for Black:", black_responses[next_move])
+    else:
+        print("Develop pieces toward the center (Nf6, d5, or e5).")
+main()
