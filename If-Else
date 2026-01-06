@@ -1,0 +1,16 @@
+#Name: Evan Machica
+#Period 6
+#HW #2
+# Time Spent 5 mintues
+year = int(input('What year were you born?'))
+if year == 2009:
+	print('Thats the year I was born too!')
+else:
+	print('Oh wow thats a interesting year to be born in.')
+print(f'{year} is a nice year to be born')
+sport = (input('What is your favorite sport?'))
+if sport == 'basketball':
+	print('Thats my favorite sport too!!')
+else:
+	print(f'{sport} is your favorite sport? Wow I didnt expect that.')
+print(f'{sport} is a cool sport to like')
