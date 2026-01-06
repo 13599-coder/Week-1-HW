@@ -1,0 +1,24 @@
+#Name: Evan Machica
+#Period 6
+#file 1/0 Homework
+#Time Spent 1 hour and 30+ minutes
+#writes three lines to a file
+file_object = open('my_file.txt', 'w')
+file_object.write("first line\n")
+file_object.write("second line\n")
+file_object.write("third line\n")
+file_object.close()
+#reads the three lines from the file provided
+file_object = open('my_file.txt', 'r')
+lines1 = file_object.readline()
+lines2 = file_object.readline()
+line3 = file_object.readline()
+file_object.close()
+#cancels out the newlines that were made.
+lines1 = lines1.rstrip('\n')
+lines2 = lines2.rstrip('\n')
+line3 = line3.rstrip('\n')
+#finally prints out the final results from reading the code
+print(lines1)
+print(lines2)
+print(line3)
