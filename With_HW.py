@@ -20,3 +20,7 @@ file_object = open('example.txt', 'r')
 for line in file_object:
     print(line)
   file_objecct.close()
+with open(filename, mode) as file_variable
+  for number in range(2)
+    ourfile.write(f'{number}\n')
+with open(filename1,mode1) as file_varible1, open(filename2,mode2) as file_varible2
