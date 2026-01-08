@@ -16,3 +16,7 @@ while line != '':
     line = num_list.readline()
 num_list.close()
 print(f'The sum of the numbers in the list is {sum}')
+file_object = open('example.txt', 'r')
+for line in file_object:
+    print(line)
+  file_objecct.close()
