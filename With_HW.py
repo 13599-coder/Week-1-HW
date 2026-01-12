@@ -1,7 +1,7 @@
 #Name: Evan Machica
 #Period 6
 #Week 1 hw
-#Time Spent 20 minutes?
+#Time Spent 30 minutes?
 user_minutes = int(input("How many minutes do you want to enter?"))
 with open("step_counter",'w') as minutes_file, open(step_counter2, 'r') as step_counter2:
   for minute in range(1, user_minutes + 1):
