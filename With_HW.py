@@ -4,6 +4,9 @@ with open("step_counter",'w') as minutes_file:
     minutes = input('#{num} what would you like to add to your mintues file? : ')
     minutes_file.write(f"{minutes}\n")
   mintues_file.close()
-
+sum = 0
+for line in file_read:
+  sum += int(line)
+print(sum)
   
     
