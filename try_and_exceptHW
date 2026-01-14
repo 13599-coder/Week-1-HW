@@ -1,0 +1,13 @@
+#Name: Evan Machica
+#Period 6
+#try_and_exceptHW
+#Time Spent
+def math_ops(a, b):
+  add = a + b
+  sub = a - b
+  mul = a * b
+  div = a / b
+welcome = ('Welcome to your very basic calculator!!!!')
+operation = ('Which operation would you like your calculator to perform? Addition/Subtraction/Division/Multiplication: ').lower()
+num_1 = int(input('enter the first number: '))
+num_2 = int(input('enter the second number: '))
