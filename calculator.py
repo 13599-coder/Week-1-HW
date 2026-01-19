@@ -21,3 +21,13 @@ elif operation == "multiple":
     print("multiplication:", m)
 elif operation == "divide":
     print("division:", d)
+else: 
+  print("invalid operation")
+
+file = open("calculator_file.txt, "a")
+file.write(f"{num1}, {num2}\n")
+file.write(f"add: {add}\n")
+file.write(f"sub: {sub}\n")
+file.write(f"mul: {mul}\n")
+file.write(f"div: {div}\n")
+file.close()
