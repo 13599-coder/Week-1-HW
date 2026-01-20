@@ -1,7 +1,7 @@
 #Name: Evan Machica
 #Period 6
 #try_and_exceptHW
-#Time Spent
+#Time Spent  3 hours?
 def math_ops(a, b):
   add = a + b
   sub = a - b
