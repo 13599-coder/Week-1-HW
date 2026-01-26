@@ -12,3 +12,7 @@ change = input("woudl you like to edit your list? (y/n) ").lower()
 while choice == "y":
   try:
     index = int(input('index to change your list ')
+    list[index]= input('new value: ')
+    print('here is your list with your edits:', list)
+
+      
