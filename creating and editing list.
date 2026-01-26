@@ -4,20 +4,20 @@
 #Time Spent 1 hour
 print('hello welcome to your list maker')
 length_of_list = int(input('how many items would you like your list to be? '))
-list = []
+my_list = []
 for i in range(length_of_list):
-  list =+ [input("enter item ")]
-print("this is your list", list)
+  my_list =+ [input("enter item ")]
+print("this is your list", my_list)
 change = input("woudl you like to edit your list? (y/n) ").lower()
 while choice == "y":
   try:
     index = int(input('index to change your list '))
     list[index]= input('new value: ')
-    print('here is your list with your edits:', list)
+    print('here is your list with your edits:', my_list)
   except IndexError:
     print('that index isnt possible')
 
   change = input("would you like to change the code again? (y/n) ").lower()
-print("this is your final list", list)
+print("this is your final list", my_list)
 
       
