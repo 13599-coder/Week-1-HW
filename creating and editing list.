@@ -5,7 +5,7 @@
 print('hello welcome to your list maker')
 length_of_list = int(input('how many items would you like your list to be? '))
 list = []
-for i in range(num):
+for i in range(length_of_list):
   list =+ [input("enter item ")]
 print("this is your list", list)
 change = input("woudl you like to edit your list? (y/n) ").lower()
