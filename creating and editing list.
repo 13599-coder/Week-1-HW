@@ -3,4 +3,12 @@
 #creating and editing list
 #Time Spent 1 hour
 print('hello welcome to your list maker')
-length_of_list = input('how many items would you like your list to be? ')
+length_of_list = int(input('how many items would you like your list to be? '))
+list = []
+for i in range(num):
+  list =+ [input("enter item ")]
+print("this is your list", list)
+change = input("woudl you like to edit your list? (y/n) ").lower()
+while choice == "y":
+  try:
+    index = int(input('index to change your list ')
