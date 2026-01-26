@@ -9,7 +9,7 @@ for i in range(length_of_list):
   my_list += [input("enter item ")]
 print("this is your list", my_list)
 change = input("woudl you like to edit your list? (y/n) ").lower()
-while choice == "y":
+while change == "y":
   try:
     index = int(input('index to change your list '))
     list[index]= input('new value: ')
