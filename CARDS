@@ -4,12 +4,13 @@
 #Time Spent 
 import random
 #creating the decks with the suits ranks and values. 
-deck = [(s,k,v)
+deck_t = (
+        (s, k, (2,3,4,5,6,7,8,9,10,11,12,13,14)[
+                (2,3,4,5,6,7,8,9,10, 'J', 'Q', 'K', 'A').index(k)
+        ])
         for s in ('♠', '♥', '♦', '♣')
-        for k, v in tuple(
-            (2,3,4,5,6,7,8,9,10, 'J', 'Q', 'K', 'A'),
-            (2,3,4,5,6,7,8,9,10,11,12,13,14)
-        )]
+        for k in (2,3,4,5,6,7,8,9,10,'J', 'Q', 'K', 'A')
+)
 #the suits order if a tie breaker situation would happen
-suit_order = {'♠':1, '♥':2, '♦':3, '♣':4}
+deck = list(deck_t)
 random.shuffle(deck)
