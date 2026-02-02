@@ -45,7 +45,7 @@ else:
         elif suit_order[player_card[0]] < suit_order[computer_card[0]]:
                 print("the code wins by suit!")
         else:
-                print("bruh yall tie.")
+                print("bruh yall tie. DO YOU KNOW HOW HARD IT IS TO TIE LIKE ACTTAULY UR BAD")
 
         
 
