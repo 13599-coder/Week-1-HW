@@ -22,5 +22,24 @@ print('your card is:', player_card)
 discards = 0
 while discards < 3:
         choice = input("would you like to discard your card? (y/n) ").lower()
-        if choice = "y":
+        if choice == "y":
+                player_card = random.choice(deck)
+                deck.remove(plyaer_card)
+                discards += 1
+                print('new card:', player_card)
+        else:
+                break
+#now its the codes turn to draw a card so we can just repeat the process again.
+computer_card = random.choice(deck)
+deck.remove(computer_card)
+print('computers card:', computer_card)
+#determine the winner based on the value of the suits and numeer
+if player_card[2] > computer_card[2]:
+        print('YOU BEAT THE CODE!!')
+elif player_card[2] < computer_card[2]:
+        print('you got packed by a code.')
+else:
+        if suit_order[player_card[0]] > suit_order[computer_card[0]]:
+                print('you win by suits!')
+        
 
