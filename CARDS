@@ -38,8 +38,14 @@ if player_card[2] > computer_card[2]:
         print('YOU BEAT THE CODE!!')
 elif player_card[2] < computer_card[2]:
         print('you got packed by a code.')
+
 else:
         if suit_order[player_card[0]] > suit_order[computer_card[0]]:
                 print('you win by suits!')
+        elif suit_order[player_card[0]] < suit_order[computer_card[0]]:
+                print("the code wins by suit!")
+        else:
+                print("bruh yall tie.")
+
         
 
