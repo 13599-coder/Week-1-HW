@@ -13,4 +13,14 @@ deck_t = (
 )
 #the suits order if a tie breaker situation would happen
 deck = list(deck_t)
-random.shuffle(deck)
+suit_order = {'♠':4, '♥':3, '♦':2, '♣':1}
+#deals a random card to the player/user
+player_card = random.choice(deck)
+deck.remove(player_card)
+print('your card is:', player_card)
+#gives the user a option to discards their cards only 3.
+discards = 0
+while discards < 3:
+        choice = input("would you like to discard your card? (y/n) ").lower()
+        if choice = "y":
+
