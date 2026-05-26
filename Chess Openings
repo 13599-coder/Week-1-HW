@@ -67,5 +67,12 @@ class ChessGUI:
         self.role_entry = tk.Entry(self.window)
         self.role_entry.pack()
         tk.Label(self.window, text="First MOve:").pack()
-        #buttons
+        tk.Label(self.window, text="Second Move:").pack()
+        self.second_entry = tk.Entry(self.window)
+        self.second_entry.pack()
+#buttons here
+        tk.Button(self.window, text="Enter", command=self.process).pack(pady=10)
+        tk.Button(self.window, text="Show Moves", command=self.show_moves).pack(pady=5)
+        tk.Button(self.window, text="Restart", command=self.reset).pack(pady=5
+#cutoff here
         
