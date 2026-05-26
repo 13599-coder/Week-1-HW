@@ -2,22 +2,22 @@
 #Period 6
 #Final
 #Time Spent 7 Days and lots of youtube videos.
+import tkinter as tk
+from tkinter import messageox
+class Player: 
+    def __init__(self,color):
+        self.color = color
+        self.move = []
+    def add_move(self, move):
+        if move:
+            self.moves.append(move)
+#im going to name it WPlayer instead of white player cause that sounds bad.
+class WPlayer(Player)
+    pass
+class Bplayer(Player)
+    pass
 print("Chess Opening")
-def main():
-    """main loop that allows the user to run multiple times for different openings."""
-    while True:
-        role = input("Are you playing as White or Black pieces? ").lower()
-        if role == "white":
-            white_moves()
-        elif role == "black":
-            blackm()
-        else:
-            print("That isn't a option please type either White or Black.")
-        #loops control so they can run it multiple times
-        runitback = input("Do you want to look another opening? (yes/no): ").lower()
-        if runitback != "yes":
-            print("Thanks for using chess opening helper!")
-            break
+
 #all possible valid opening moves for white made as a list. 
 white_openings = [
     "a3", "a4", "b3", "b4", "c3", "c4",
@@ -56,29 +56,7 @@ white_followups = {
     "nf6": "Play Nc3 or e5.",
     "b6": "Play d4 or e4 to take the center."
 }
-def white_moves():
-    """Does all the moves if you choose to be the white pieces"""
-    white_move = input("What is your first move as white? ").lower()
-    if white_move not in white_openings:
-        print("That isn't a first move that works. But we can find a differnt move in a second.")
-    black_move = input("What move did black play? ").lower()
-    #gives white’s best follow-up
-    if black_move in white_followups:
-        print("Best move for white:", white_followups[black_move])
-    else:
-        print("The moves you entered aren't real, but I suggest that you develop pieces in the center")
-def blackm():
-    """does all the avalabile black moves for when the user is playing black."""
-    white_move = input("What is White's first move? ").lower()
-    #gives Black’s opening response
-    if white_move in black_responses:
-        print("Best response for black:", black_responses[white_move])
-    else:
-        print("That move isn't possible. I think its best if you play Nf6 or d5.")
-    #ask for white's next move
-    next_move = input("What is White's second move? ").lower()
-    if next_move in black_responses:
-        print("best follow up move for Black:", black_responses[next_move])
-    else:
-        print("Develop pieces toward the center (Nf6, d5, or e5).")
-main()
+class ChessGUI:
+    def __init__(self):
+        self.player = Player("unknown")
+        self.window = tk.Tk()
