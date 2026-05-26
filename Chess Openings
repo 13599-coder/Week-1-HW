@@ -60,3 +60,12 @@ class ChessGUI:
     def __init__(self):
         self.player = Player("unknown")
         self.window = tk.Tk()
+        self.window.title("Chess Opening Helper")
+        self.window.geometry("520x500")
+        tk.Label(self.window, text="Chess Opening Helper", font=("Arial", 16)).pack(pady=10)
+        tk.Label(self.window, text="White or Black PIECES:").pack()
+        self.role_entry = tk.Entry(self.window)
+        self.role_entry.pack()
+        tk.Label(self.window, text="First MOve:").pack()
+        #buttons
+        
