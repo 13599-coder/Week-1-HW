@@ -1,7 +1,7 @@
 #Name: Evan Machica
 #Period 6
 #Final
-#Time Spent 7 Days and lots of youtube videos.
+#Time Spent: TBD so far like 50 minutes
 import tkinter as tk
 from tkinter import messageox
 class Player: 
@@ -74,5 +74,12 @@ class ChessGUI:
         tk.Button(self.window, text="Enter", command=self.process).pack(pady=10)
         tk.Button(self.window, text="Show Moves", command=self.show_moves).pack(pady=5)
         tk.Button(self.window, text="Restart", command=self.reset).pack(pady=5
-#cutoff here
+        self.output = tk.StringVar()
+        self.output.set("enter info above")
+        tk.Label(self.window, textvariable=self.output, wraplength=420).pack(pady=20)
+        self.window.mainloop()
+    def process(self):
+        try:
+            
+
         
