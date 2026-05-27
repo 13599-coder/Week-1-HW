@@ -80,6 +80,10 @@ class ChessGUI:
         self.window.mainloop()
     def process(self):
         try:
+            role = self.role_entry.get()lower().strip()
+            move = self.move_entry.get().lower().strip()
+            second = self.second_entry.get().lower().strip()
+            if role == "white":
             
 
         
