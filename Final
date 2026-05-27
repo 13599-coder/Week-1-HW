@@ -48,13 +48,13 @@ black_responses = {
 #white replies to black’s first move 
 white_followups = {
     "e5": "Play Nf3 or d4.",
-    "c5": "You can play Nf3, c3, or d4 (Open Sicilian).",
-    "c6": "Play d4, then Nc3 (Caro-Kann mainline).",
+    "c5": "You can play Nf3, c3, or d4 (Open Sicilian) my personal favorite.",
+    "c6": "Play d4, then Nc3 (Caro-Kann mainline), one of the most popular positions because it is that good.",
     "e6": "Play d4 and prepare Nc3 (French mainline).",
-    "d5": "Play Nc3 or exd5 depending on your style.",
-    "g6": "Play d4 and then c4 (King's Indian setup).",
-    "nf6": "Play Nc3 or e5.",
-    "b6": "Play d4 or e4 to take the center."
+    "d5": "Play Nc3 or exd5 depending on if you want to be more aggressive or passive.",
+    "g6": "Play d4 and then c4 (King's Indian setup). This is a simple yet effective position that will increase your chances of winning if you play it correctly.",
+    "nf6": "Play Nc3 or e5. This is a powerful position that will help most beginners win.",
+    "b6": "Play d4 or e4 to take the center, which is key in a good attacking position."
 }
 class ChessGUI:
     def __init__(self):
