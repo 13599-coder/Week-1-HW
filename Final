@@ -12,9 +12,9 @@ class Player:
         if move:
             self.moves.append(move)
 #im going to name it WPlayer instead of white player cause that sounds bad.
-class WPlayer(Player)
+class WPlayer(Player):
     pass
-class Bplayer(Player)
+class Bplayer(Player):
     pass
 print("Chess Opening")
 
