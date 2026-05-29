@@ -98,7 +98,7 @@ class ChessGUI:
             message = ""
             if role == "white":
                 if move in white_openings:
-                    message = f"Good opening. Black may player: {black_responses.get(move, 'unknown')}"
+                    message = f"THATS A GREAT OPENING. I would predict black will play: {black_responses.get(move, 'unknown')}"
                 else: message = "thats a interesting move...its a little uncommon sorry."
             if second:
                 if second in white_followups:
