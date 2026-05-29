@@ -109,7 +109,7 @@ class ChessGUI:
                 if move in black_responses:
                     message = f"Best reponse: {black_responses[move]}"
                 else:
-                    message = "Player the moves Nf6 or d5."
+                    message = "Play the moves Nf6 or d5 in order to have a very solid opening position."
                 if second:
                     if second in black_responses:
                         message += f"\nBest follow up: {black_responses[second]}"
@@ -120,7 +120,7 @@ class ChessGUI:
             messagebox.showerror("Error", str(e))
     def show_moves(self):
         moves_str = ",".join(self.player.moves) if self.player.moves else "NO moves have been made yet..."
-        messagebox.showinfo("MOves Player", f"Player ({self.player.color}): {moves_str}")
+        messagebox.showinfo("Moves Player", f"Player ({self.player.color}): {moves_str}")
     def reset(self):
         self.player.moves.clear()
         self.role_entry.delete(0, tk.END)
