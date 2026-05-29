@@ -1,7 +1,7 @@
 #Name: Evan Machica
 #Period 6
 #Final
-#Time Spent: 5 hours+ GUI is hard.
+#Time Spent: IDK THE EXACT NUMBER ALL I KNOW IS. GUI is hard.
 import tkinter as tk
 from tkinter import messagebox
 class Player: 
