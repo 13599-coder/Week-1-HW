@@ -14,7 +14,7 @@ class Player:
 #im going to name it WPlayer instead of white player cause that sounds bad.
 class WPlayer(Player):
     pass
-class Bplayer(Player):
+class BPlayer(Player):
     pass
 print("Chess Opening")
 
@@ -102,7 +102,7 @@ class ChessGUI:
                 if second in white_followups:
                     message += f"\nDevelop pieces toward the center."
                 else:
-                    message = += "\nThe best move would be to develop your pieces toward the center."
+                    message += "\nThe best move would be to develop your pieces toward the center."
             elif role == "black":
                 if move in black_responses:
                     message = f"Best reponse: {black_reponses[move]}"
@@ -110,14 +110,14 @@ class ChessGUI:
                     message += "Player the moves Nf6 or d5."
                 if second:
                     if second in black_reponses:
-                        message += f"\nBest follow up: {black_reponses[second]}"
+                        message += f"\nBest follow up: {black_responses[second]}"
                     else:
                         message += "\nDevelop the pieces towards the center for a powerful defenseive and attacking postion"
             self.output.set(message)
         except Exception as e:
             messagebox.showerror("Error", str(e))
     def show_moves(self):
-        move_str = ",".join(self.player.moves) if self.player.moves else "NO moves have been made yet..."
+        moves_str = ",".join(self.player.moves) if self.player.moves else "NO moves have been made yet..."
         messagebox.showinfo("MOves Player", f"Player ({self.player.color}): {moves_str}")
     def reset(self):
         self.player.moves.clear()
