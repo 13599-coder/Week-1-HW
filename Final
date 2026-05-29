@@ -102,14 +102,14 @@ class ChessGUI:
                 else: message = "thats a interesting move...its a little uncommon sorry."
             if second:
                 if second in white_followups:
-                    message += f"\nDevelop pieces toward the center."
+                    message += f"\n{white_followups[second]}"
                 else:
                     message += "\nThe best move would be to develop your pieces toward the center."
             elif role == "black":
                 if move in black_responses:
                     message = f"Best reponse: {black_responses[move]}"
                 else:
-                    message += "Player the moves Nf6 or d5."
+                    message = "Player the moves Nf6 or d5."
                 if second:
                     if second in black_responses:
                         message += f"\nBest follow up: {black_responses[second]}"
