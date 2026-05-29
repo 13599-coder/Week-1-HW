@@ -67,50 +67,52 @@ class ChessGUI:
         self.role_entry = tk.Entry(self.window)
         self.role_entry.pack()
         tk.Label(self.window, text="First MOve:").pack()
+        self.move_entry = tk.Entry(self.window)
+        self.move_entry.pack()
         tk.Label(self.window, text="Second Move:").pack()
         self.second_entry = tk.Entry(self.window)
         self.second_entry.pack()
 #buttons here
         tk.Button(self.window, text="Enter", command=self.process).pack(pady=10)
         tk.Button(self.window, text="Show Moves", command=self.show_moves).pack(pady=5)
-        tk.Button(self.window, text="Restart", command=self.reset).pack(pady=5
+        tk.Button(self.window, text="Restart", command=self.reset).pack(pady=5)
         self.output = tk.StringVar()
         self.output.set("enter info above")
         tk.Label(self.window, textvariable=self.output, wraplength=420).pack(pady=20)
         self.window.mainloop()
     def process(self):
         try:
-            role = self.role_entry.get()lower().strip()
+            role = self.role_entry.get().lower().strip()
             move = self.move_entry.get().lower().strip()
             second = self.second_entry.get().lower().strip()
             if role == "white":
-                self.player = WhitePlayer("white")
+                self.player = WPlayer("white")
             elif role == "black":
-                self.player = BlackPlayer("black")
+                self.player = BPlayer("black")
             else:
                 self.output.set("Type White or Black (CHESS PIECE COLOR)")
                 return
             self.player.add_move(move)
             message = ""
-            if role == "white"
-                if move in white_opening:
+            if role == "white":
+                if move in white_openings:
                     message = f"Good opening. Black may player: {black_responses.get(move, 'unknown')}"
                 else: message = "thats a interesting move...its a little uncommon sorry."
             if second:
-                if second in white_followup:
+                if second in white_followups:
                     message += f"\nDevelop pieces toward the center."
                 else:
                     message = += "\nThe best move would be to develop your pieces toward the center."
-        elif role == "black":
-            if move in black_responses:
-                message = f"Best reponse: {black_reponses[move]}"
-            else:
-                message += "Player the moves Nf6 or d5."
-            if second:
-                if second in black_reponses:
-                    message += f"\nBest follow up: {black_reponses[second]}
+            elif role == "black":
+                if move in black_responses:
+                    message = f"Best reponse: {black_reponses[move]}"
                 else:
-                    message += "\nDevelop the pieces towards the center for a powerful defenseive and attacking postion"
+                    message += "Player the moves Nf6 or d5."
+                if second:
+                    if second in black_reponses:
+                        message += f"\nBest follow up: {black_reponses[second]}"
+                    else:
+                        message += "\nDevelop the pieces towards the center for a powerful defenseive and attacking postion"
             self.output.set(message)
         except Exception as e:
             messagebox.showerror("Error", str(e))
