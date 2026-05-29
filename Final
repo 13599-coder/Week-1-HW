@@ -93,6 +93,8 @@ class ChessGUI:
                 self.output.set("Type White or Black (CHESS PIECE COLOR)")
                 return
             self.player.add_move(move)
+            if second:
+                self.player.add_move(second)
             message = ""
             if role == "white":
                 if move in white_openings:
@@ -105,14 +107,14 @@ class ChessGUI:
                     message += "\nThe best move would be to develop your pieces toward the center."
             elif role == "black":
                 if move in black_responses:
-                    message = f"Best reponse: {black_reponses[move]}"
+                    message = f"Best reponse: {black_responses[move]}"
                 else:
                     message += "Player the moves Nf6 or d5."
                 if second:
-                    if second in black_reponses:
+                    if second in black_responses:
                         message += f"\nBest follow up: {black_responses[second]}"
                     else:
-                        message += "\nDevelop the pieces towards the center for a powerful defenseive and attacking postion"
+                        message += "\nDevelop the pieces towards the center for a powerful defensive and attacking position."
             self.output.set(message)
         except Exception as e:
             messagebox.showerror("Error", str(e))
