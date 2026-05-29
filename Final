@@ -31,19 +31,19 @@ black_responses = {
     "d4": "Dutch Defense (f5), King's Indian (Nf6 + g6), or Slav Defense (c6)",
     "g4": "Play e5, then d5, then c6. If White plays Bg2, play ...xg4.",
     "a3": "Polish Defense setup, Sicilian Defense, or King's Indian Defense",
-    "nc3": "Nf6, d5, or e5",
-    "f4": "Nf6, e5, or d5",
-    "b3": "h6, d5, or d6",
-    "e3": "d5, e5, or h5",
-    "c4": "a5, c5, or b6",
-    "d3": "Nf6, d6, or a6",
-    "nf3": "g6, Nc6, or e6",
-    "g3": "b5, g6, or e5",
-    "a4": "c5, f5, or h6",
-    "b4": "d6, h6, or e5",
-    "na3": "a5, a6, or d5",
-    "nh3": "g6, d5, or c5",
-    "c3": "Nf6, f5, or c6"
+    "nc3": "Nf6, d5, or e5 would be the best availible moves",
+    "f4": "Nf6, e5, or d5 is most ideal",
+    "b3": "h6, d5, or d6 is my personal recommendation",
+    "e3": "d5, e5, or h5 is a very good opening position",
+    "c4": "a5, c5, or b6 this gives a strong position at the begining of the game",
+    "d3": "Nf6, d6, or a6 this opening is used by lots of pros",
+    "nf3": "g6, Nc6, or e6 this opening is a less popular opening but is still very solid",
+    "g3": "b5, g6, or e5 I used this opening when I was just starting out",
+    "a4": "c5, f5, or h6 this is a unique opening that not many people will be expecting",
+    "b4": "d6, h6, or e5 this opening has high risk but a even higher reward if you play it correctly",
+    "na3": "a5, a6, or d5 strong position with lots of attacking opportunities",
+    "nh3": "g6, d5, or c5 this is a solid defensive position",
+    "c3": "Nf6, f5, or c6 a very safe opening"
 }
 #white replies to black’s first move 
 white_followups = {
