@@ -3,11 +3,11 @@
 #Final
 #Time Spent: TBD so far like 50 minutes
 import tkinter as tk
-from tkinter import messageox
+from tkinter import messagebox
 class Player: 
     def __init__(self,color):
         self.color = color
-        self.move = []
+        self.moves = []
     def add_move(self, move):
         if move:
             self.moves.append(move)
@@ -84,6 +84,49 @@ class ChessGUI:
             move = self.move_entry.get().lower().strip()
             second = self.second_entry.get().lower().strip()
             if role == "white":
+                self.player = WhitePlayer("white")
+            elif role == "black":
+                self.player = BlackPlayer("black")
+            else:
+                self.output.set("Type White or Black (CHESS PIECE COLOR)")
+                return
+            self.player.add_move(move)
+            message = ""
+            if role == "white"
+                if move in white_opening:
+                    message = f"Good opening. Black may player: {black_responses.get(move, 'unknown')}"
+                else: message = "thats a interesting move...its a little uncommon sorry."
+            if second:
+                if second in white_followup:
+                    message += f"\nDevelop pieces toward the center."
+                else:
+                    message = += "\nThe best move would be to develop your pieces toward the center."
+        elif role == "black":
+            if move in black_responses:
+                message = f"Best reponse: {black_reponses[move]}"
+            else:
+                message += "Player the moves Nf6 or d5."
+            if second:
+                if second in black_reponses:
+                    message += f"\nBest follow up: {black_reponses[second]}
+                else:
+                    message += "\nDevelop the pieces towards the center for a powerful defenseive and attacking postion"
+            self.output.set(message)
+        except Exception as e:
+            messagebox.showerror("Error", str(e))
+    def show_moves(self):
+        move_str = ",".join(self.player.moves) if self.player.moves else "NO moves have been made yet..."
+        messagebox.showinfo("MOves Player", f"Player ({self.player.color}): {moves_str}")
+    def reset(self):
+        self.player.moves.clear()
+        self.role_entry.delete(0, tk.END)
+        self.move_entry.delete(0, tk.END)
+        self.second_entry.delete(0, tk.END)
+        self.output.set("reset has been completed now all moves have been reset.")
+ChessGUI()
+        
+                
+
             
 
         
